@@ -1,0 +1,395 @@
+<html>
+<head>
+  <title>Gina Li</title>
+  <!--Custom CSS stylesheet for website-->
+  <link href='style.css' rel='stylesheet' type='text/css'>
+
+  <!--jQuery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!--Boostrap v4 alpha-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!--Google Fonts-->
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <script>
+
+  $(document).ready(function() {
+    // keep track of opened details in Experiences section
+    var openedDetails = false;
+
+    $('.scrollToTop').hide();
+    //Check to see if the window is top if not then display button
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+
+	//Click event to scroll to top
+	$('.scrollToTop').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+
+    $("#education_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#education-container").offset().top},
+          'slow');
+        });
+    $("#experience_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#experience-container").offset().top},
+          'slow');
+        });
+
+    $("#research_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#research-container").offset().top},
+          'slow');
+        });
+
+    $("#projects_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#projects-container").offset().top},
+          'slow');
+        });
+
+    $("#honors_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#honors-container").offset().top},
+          'slow');
+        });
+
+    $("#contact_button").click(function() {
+      $('html,body').animate({
+          scrollTop: $("#contact-container").offset().top},
+          'slow');
+        });
+
+    $("#experience3_button").click(function() {
+      if ($("#experience2_more:visible, #experience1_more:visible").length != 0) {
+        $("#experience2_more").hide();
+        $("#experience1_more").hide();
+      }
+      $("#experience3_more").toggle(500);
+    });
+
+    $("#experience2_button").click(function() {
+      if ($("#experience3_more:visible, #experience1_more:visible").length != 0) {
+        $("#experience3_more").hide();
+        $("#experience1_more").hide();
+      }
+      $("#experience2_more").toggle(500);
+    });
+
+    $("#experience1_button").click(function() {
+      if ($("#experience3_more:visible, #experience2_more:visible").length != 0) {
+        $("#experience3_more").hide();
+        $("#experience2_more").hide();
+      }
+      $("#experience1_more").toggle(500);
+    });
+
+    $("#show_courses").click(function() {
+      $("#courses").toggle();
+    });
+
+  });
+
+  </script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89990446-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+<a href="#" style="display: none;" class="scrollToTop btn btn-dark" role="button">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</a>
+
+<header>
+  <h1>Gina L. Li</h1>
+  <h2>Virginia Tech Undergraduate Class of 2017 | Geography, GIS, and Computer Science</h2>
+  <div class="social-media-menu">
+    <a href="https://www.linkedin.com/in/ginali5" target="_blank" class="btn btn-outline-primary" role="button"><i class="fa fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/ginaliqili" target="_blank" class="btn btn-outline-primary" role="button"><i class="fa fa-github"></i> Github</a>
+    <a href="https://twitter.com/ginali123" target="_blank" class="btn btn-outline-primary" role="button"><i class="fa fa-twitter"></i> Twitter</a>
+  </div>
+</header>
+
+<div id="categories-container">
+<div class="categories-menu">
+  <table id="categories-table">
+    <tr>
+      <td>
+        <div class="category" id="education_button">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i><br /> Education
+        </div>
+      </td>
+      <td>
+        <div class="category" id="research_button">
+          <i class="fa fa-pencil-square" aria-hidden="true"></i><br /> Research & Publications
+        </div>
+      </td>
+      <td>
+        <div class="category" id="projects_button">
+          <i class="fa fa-archive" aria-hidden="true"></i><br /> Projects
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="category" id="experience_button">
+          <i class="fa fa-briefcase" aria-hidden="true"></i><br /> Experience
+        </div>
+      </td>
+      <td>
+        <div class="category" id="honors_button">
+          <i class="fa fa-star" aria-hidden="true"></i><br /> Honors & Awards
+        </div>
+      </td>
+      <td>
+        <div class="category" id="contact_button">
+          <i class="fa fa-envelope" aria-hidden="true"></i><br /> Contact
+        </div>
+      </td>
+    </tr>
+  </table>
+  </div>
+</div>
+
+<div id="education-container">
+  <div class="categories-menu-2">
+    <h1>Education</h1>
+    <div class="categories-content">
+    <p>
+      Geography Major, Geographic Information Systems Minor, and Computer Science Minor at Virginia Polytechnic
+      Institute and State University (Virginia Tech). <br/><br />Currently listed as Geography & Computer Science Double Major.
+    </p>
+    <div class="category2" id="show_courses">View Details</div>
+    <div style="display: none;" id="courses">
+    <p>
+      <h3> Relevant Geography Coursework:</h3>
+      <ul>
+        <li>Undergraduate Research</li>
+        <li>Geographic Information Systems</li>
+        <li>Remote Sensing/Photogrammetry</li>
+        <li>Physical Geography</li>
+        <li>Human Geography</li>
+        <li>Sustainability</li>
+        <li>Medical Geography</li>
+      </ul>
+      <h3>Relevant Computer Science Coursework:</h3>
+      <ul>
+        <li>Data Structures & Algorithms</li>
+        <li>Computer Organization 1&2</li>
+        <li>Advanced GUI and Graphics</li>
+        <li>Combinatorics & Discrete Mathematics</li>
+      </ul>
+    </p>
+  </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+<div id="research-container">
+  <div class="categories-menu-2">
+    <h1>Research & Publications</h1>
+    <div class="categories-content">
+    <p>
+      I am interested in researching factors related to climate change and how those factors affect human activity and health. These include extreme weather events,
+      agricultural practices, and urbanization. I have experience with GIS, remote sensing, and programming in various languages for SWE. My research topics include
+      land use/land cover change, climate change, and data visualization. As an undergraduate studying Geographic Information Systems and
+      Computer Science, I aim to research important trends in the environment using new technologies. Additionally, I enjoy translating my research
+      findings into useful data visualizations by creating web applications.<br /><br />
+
+    </p>
+    <br />
+    <h3>Evaluation of Topographic Correction on Subpixel Impervious Cover Mapping With CBERS-2B Data</h3>
+    <h4>Aug 2015</h4>
+    <a href="pdf/Publication_Aug_2015.pdf" target="_blank">
+      <div class="category2">View Publication</div>
+    </a>
+  </div>
+  </div>
+</div>
+
+<div id="projects-container">
+  <div class="categories-menu-2">
+    <h1>Projects</h1>
+    <div class="categories-content">
+    <p>
+      <h3>
+      EPA Algal Blooms Research Proposal</h3>
+      <h4>Ongoing</h4>
+      <a href="http://www.ginali.xyz/algalblooms" target = "_blank">
+        <div class="category2">Preview Web App</div>
+      </a>
+      <a href="https://github.com/ginaliqili/AlgalBlooms" target = "_blank">
+        <div class="category2">View Code</div>
+      </a>
+      <br />
+      <br />
+      <h3>
+      NOAA Heat Wave Web Application</h3>
+      <h4>Summer 2016</h4>
+      <a href="http://www.ginali.xyz/NIHHIS" target = "_blank">
+        <div class="category2">Launch Web App</div>
+      </a>
+      <a href="https://github.com/ginaliqili/NIHHIS" target = "_blank">
+        <div class="category2">View Code</div>
+      </a>
+      <br />
+      <br />
+      <h3>
+      Extreme Heat Literature Review</h3>
+      <h4>Summer 2016</h4>
+      <a href="pdf/LiteratureReview.pdf" target = "_blank">
+        <div class="category2">View Report</div>
+      </a>
+      <br />
+      <br />
+      <h3>Crop Prediction Using High Resolution Aerial Imagery</h3>
+      <h4>Fall 2015 - Fall 2016</h4>
+        <div class="category2">Report Coming Soon</div>
+      <br />
+      <br />
+    </p>
+  </div>
+  </div>
+</div>
+
+<div id="experience-container">
+  <div class="categories-menu-2">
+    <h1>Experience</h1>
+    <div class="categories-content">
+    <p>
+      <h3> Undergraduate TA</h3>
+      <h4>GEOG 2084: Principles of GIS | Aug '16 - Dec '16</h4>
+      <a href="pdf/GEOG2084_Syllabus.pdf" target="_blank">
+        <div id="view_syllabus" class="category2">View Syllabus</div>
+      </a>
+      <br /><br />
+      <h3> National Oceanic and Atmospheric Administration</h3>
+      <h4>Ernest F. Hollings Scholar</h4>
+      <h4>Climate Program Office | June '16 - Aug '16</h4>
+      <div id="experience3_button" class="category2">View Details</div>
+      <ul id="experience3_more" class="experience">
+        <li>Worked on the <a href="http://cpo.noaa.gov/AboutCPO/IntegratedInformationSystems/NIHHIS/AboutNIHHIS.aspx" target="_blank">National Integrated Heat Health Information System </a>, a June 2015 White House Initiative</li>
+        <li>Compiled <a href="pdf/LiteratureReview.pdf" target="_blank">literature review</a> about extreme heat events - parameters, case studies, thresholding, vulnerable populations</li>
+        <li>Created a <a href="http://www.ginali.xyz/NIHHIS/map.php" target="_blank">web app</a> to analyze and visualize historical heat waves (see Projects section)</li>
+      </ul>
+      <br /><br/>
+      <h3>Lockheed Martin</h3>
+      <h4>Software Engineering Intern | June '15 - Aug '15'</h4>
+      <div id="experience2_button" class="category2">View Details</div>
+      <ul id="experience2_more" class="experience">
+        <li>Worked with 5 other software engineers</li>
+        <li>Used of Object-Oriented programming, SOAP protocols, Java Message System (JMS) API, Business Process Model and Notation (BPMN), UML designing </li>
+        <li>Languages included XML and Java</li>
+        <li>Software included Eclipse IDE and version control tools such as Git, Gerrit code review, and Jenkins</li>
+        <li>Used Apache Maven for build automation and Apache Tomcat for our web server</li>
+      </ul>
+      <br /><br />
+      <h3>Dominion Resources, Inc.</h3>
+      <h4>GIS Services Intern | May '14 - Aug '14</h4>
+      <div id="experience1_button" class="category2">View Details</div>
+      <ul id="experience1_more" class="experience">
+        <li>Worked on Dominion's geographic information system for distribution power lines</li>
+        <li>Use of ArcFM to edit symbology and map attribution with ESRI's Spatial and Network Analyst tools</li>
+        <li>Created internal SharePoint website for Dominion’s GIS group to display map galleries, interactive maps, user profiles, and contact information</li>
+        <li>Use of ESRI products and tools, Microsoft SharePoint, HTML, CSS, JavaScript, jQuery UI</li>
+      </ul>
+    </p>
+  </div>
+  </div>
+</div>
+
+<div id="honors-container">
+  <div class="categories-menu-2">
+    <h1>Honors & Awards</h1>
+    <div class="categories-content">
+    <p>
+      <h3>2017 AMS Student Conference Poster Presenter</h3>
+      <h4> American Geophysical Union</h4>
+      <br /><br />
+      <h3>2016 AGU Fall Meeting Oral & Poster Presenter</h3>
+      <h4> American Geophysical Union</h4>
+      <a href="https://agu.confex.com/agu/fm16/meetingapp.cgi/Paper/165253?nocache=1" target = "_blank">
+        <div class="category2">View ePoster</div>
+      </a>
+      <br /><br />
+      <h3>2016 NOAA Science and Education Symposium "Outstanding Oral Presentation" Award</h3>
+      <h4>National Oceanic and Atmospheric Administration</h4>
+      <br /><br />
+      <h3>2015 NOAA Ernest F. Hollings Scholarship Recipient</h3>
+      <h4>National Oceanic and Atmospheric Administration</h4>
+      <a href="http://www.oesd.noaa.gov/scholarships/hollings.html#page=program" target="_blank">
+        <div class="category2">View Details</div>
+      </a>
+      <br /><br />
+      <h3>2015 William M. Carter Memorial Scholarship Recipient</h3>
+      <h4>Virginia Tech College of Natural Resources & the Environment</h4>
+      <a href="http://cnre.vt.edu/students/paying-for-school/scholarships/" target="_blank">
+        <div class="category2">View Details</div>
+      </a>
+      <br /><br />
+      <h3>2014 Office of GIS Symposium Third Place</h3>
+      <h4>Virginia Tech Office of GIS (OGIS)</h4>
+      <a href="https://vtechworks.lib.vt.edu/handle/10919/50668" target="_blank">
+        <div class="category2">View ePoster</div>
+      </a>
+      <br /><br />
+      <h3>2014 ASPRS GeoLeague Team Challenge Second Place</h3>
+      <h4>American Society of Photogrammetry and Remote Sensing</h4>
+
+    </p>
+  </div>
+  </div>
+</div>
+
+
+
+<div id="contact-container">
+  <div class="categories-menu-2">
+    <h1>Contact</h1>
+    <br />
+    <br />
+    <div class="categories-content">
+    <p>
+      ginali@vt.edu
+      <br />
+      gina.li@noaa.gov
+    </p>
+
+  </div>
+  </div>
+</div>
+
+
+<footer>
+  &copy; Gina Li 2016
+</footer>
+
+</body>
+</html>
