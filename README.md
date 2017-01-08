@@ -1,4 +1,4 @@
-This is the website code I wrote for my personal website, http://ginali.xyz. It is intended for academic and professional purposes and serves as an extended online resume.
+This is the website code I wrote for my personal website. It is intended for academic and professional purposes and serves as an extended online resume.
 I have included links to my projects and project description on this static web page. Creation utilized Amazon Web Service's EC2 instance, Apache web server, and HTML/CSS/JavaScript markup and programming languages.
 
 The actual website is available online at http://ginali.xyz
