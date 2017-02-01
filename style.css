@@ -15,15 +15,31 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 
-#categories-container {
-  background-color: #1C2833;
+#sidebar {
+  height: auto;
+  width: 100px;
+  top:10px;
+  position: fixed;
+  border-radius: 8px;
 }
 
-.categories-menu {
-  padding: 30px;
+.menu-item {
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 85px;
+  width: 85px;
+  line-height: 80px;
+  color: white;
   margin: 0 auto;
-  width: 820px;
-  font-family: 'Montserrat', sans-serif;
+  margin-top: 5px;
+  background-color: rgba(62, 72, 74, 0.5);
+}
+
+.menu-item:hover {
+  background-color: rgb(0,0,0);
+  color: white;
+  cursor: pointer;
+  font-size: 110%;
 }
 
 .categories-menu-2 {
@@ -32,22 +48,6 @@ header {
   width: 800px;
 }
 
-div.category {
-  height: 150px;
-  font-size: 40px;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 8px;
-  border: 1px solid white;
-  line-height: 100px;
-  text-align: center;
-  color: white;
-}
-
-div.category:hover {
-  background-color: rgb(0,0,0);
-  cursor: pointer;
-}
 
 div.categories-content {
   font-size: 20px;
@@ -71,16 +71,6 @@ div.category2:hover {
   cursor: pointer;
   color: #1C2833;
   background-color: #42DCA3;
-}
-
-#honors_button {
-  font-size: 25pt !important;
-  line-height: 35pt;
-}
-
-#research_button {
-  font-size: 25pt !important;
-  line-height: 35pt;
 }
 
 #education-container {

@@ -40,38 +40,51 @@
 	});
 
     $("#education_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#education-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
+
     $("#experience_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#experience-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
 
     $("#research_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#research-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
 
     $("#projects_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#projects-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
 
     $("#honors_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#honors-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
 
     $("#contact_button").click(function() {
+      $(".menu-item").css("background-color", "rgba(62, 72, 74, 0.5)");
       $('html,body').animate({
           scrollTop: $("#contact-container").offset().top},
           'slow');
+      $(this).css("background-color", "black");
         });
 
     $("#experience3_button").click(function() {
@@ -126,7 +139,8 @@
 
 <header>
   <h1>Gina L. Li</h1>
-  <h2>Virginia Tech Undergraduate Class of 2017 | Geography, GIS, and Computer Science</h2>
+  <h2>Geography, GIS, and Computer Science</h2>
+  <h4>Virginia Tech Undergraduate Class of 2017</h4>
   <div class="social-media-menu">
     <a href="https://www.linkedin.com/in/ginali5" target="_blank" class="btn btn-outline-primary" role="button"><i class="fa fa-linkedin"></i> LinkedIn</a>
     <a href="https://github.com/ginaliqili" target="_blank" class="btn btn-outline-primary" role="button"><i class="fa fa-github"></i> Github</a>
@@ -134,44 +148,24 @@
   </div>
 </header>
 
-<div id="categories-container">
-<div class="categories-menu">
-  <table id="categories-table">
-    <tr>
-      <td>
-        <div class="category" id="education_button">
-          <i class="fa fa-graduation-cap" aria-hidden="true"></i><br /> Education
-        </div>
-      </td>
-      <td>
-        <div class="category" id="research_button">
-          <i class="fa fa-pencil-square" aria-hidden="true"></i><br /> Research & Publications
-        </div>
-      </td>
-      <td>
-        <div class="category" id="projects_button">
-          <i class="fa fa-archive" aria-hidden="true"></i><br /> Projects
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="category" id="experience_button">
-          <i class="fa fa-briefcase" aria-hidden="true"></i><br /> Experience
-        </div>
-      </td>
-      <td>
-        <div class="category" id="honors_button">
-          <i class="fa fa-star" aria-hidden="true"></i><br /> Honors & Awards
-        </div>
-      </td>
-      <td>
-        <div class="category" id="contact_button">
-          <i class="fa fa-envelope" aria-hidden="true"></i><br /> Contact
-        </div>
-      </td>
-    </tr>
-  </table>
+<div id="sidebar">
+  <div id="education_button" class="menu-item">
+    <center>Education</center>
+  </div>
+  <div id="research_button" class="menu-item">
+    <center>Research</center>
+  </div>
+  <div id="projects_button" class="menu-item">
+    <center>Projects</center>
+  </div>
+  <div id="experience_button" class="menu-item">
+    <center>Experience</center>
+  </div>
+  <div id="honors_button" class="menu-item">
+    <center>Honors</center>
+  </div>
+  <div id="contact_button" class="menu-item">
+    <center>Contact</center>
   </div>
 </div>
 
@@ -180,13 +174,13 @@
     <h1>Education</h1>
     <div class="categories-content">
     <p>
-      Geography Major, Geographic Information Systems Minor, and Computer Science Minor at Virginia Polytechnic
-      Institute and State University (Virginia Tech). <br/><br />Currently listed as Geography & Computer Science Double Major.
+      Pursuing B.A. in Geography and two minors in Computer Science and GIS at Virginia Polytechnic
+      Institute and State University (Virginia Tech). Expected May 2017.<br/><br />Currently listed as Geography & Computer Science Double Major.
     </p>
     <div class="category2" id="show_courses">View Details</div>
     <div style="display: none;" id="courses">
     <p>
-      <h3> Relevant Geography Coursework:</h3>
+      <h3> Relevant Geography/GIS Coursework:</h3>
       <ul>
         <li>Undergraduate Research</li>
         <li>Geographic Information Systems</li>
@@ -202,6 +196,7 @@
         <li>Computer Organization 1&2</li>
         <li>Advanced GUI and Graphics</li>
         <li>Combinatorics & Discrete Mathematics</li>
+        <li>Mobile Software Development (Android)</li>
       </ul>
     </p>
   </div>
@@ -330,38 +325,39 @@
     <h1>Honors & Awards</h1>
     <div class="categories-content">
     <p>
-      <h3>2017 AMS Student Conference Poster Presenter</h3>
-      <h4> American Geophysical Union</h4>
+      <h3>2017 Outstanding Student Conference Poster Award</h3>
+      <h4> American Meteorological Society</h4>
       <br /><br />
-      <h3>2016 AGU Fall Meeting Oral & Poster Presenter</h3>
+      <h3>2016 Fall Meeting Oral & Poster Presenter</h3>
       <h4> American Geophysical Union</h4>
       <a href="https://agu.confex.com/agu/fm16/meetingapp.cgi/Paper/165253?nocache=1" target = "_blank">
         <div class="category2">View ePoster</div>
       </a>
       <br /><br />
-      <h3>2016 NOAA Science and Education Symposium "Outstanding Oral Presentation" Award</h3>
+      <h3>2016 Science and Education Symposium "Outstanding Oral Presentation" Award</h3>
       <h4>National Oceanic and Atmospheric Administration</h4>
+      <a href="https://connectpro46305642.adobeconnect.com/_a993991110/p2he20iami8/?launcher=false&fcsContent=true&pbMode=normal" target="_blank">
+        <div class="category2">Watch Presentation</div>
+      </a>
       <br /><br />
-      <h3>2015 NOAA Ernest F. Hollings Scholarship Recipient</h3>
+      <h3>2015 Ernest F. Hollings Scholarship Recipient</h3>
       <h4>National Oceanic and Atmospheric Administration</h4>
-      <a href="http://www.oesd.noaa.gov/scholarships/hollings.html#page=program" target="_blank">
+      <a href="http://www.noaa.gov/news/hollings-eppmsi-undergraduate-scholars-present-their-summer-research-at-noaa" target="_blank">
         <div class="category2">View Details</div>
       </a>
       <br /><br />
       <h3>2015 William M. Carter Memorial Scholarship Recipient</h3>
       <h4>Virginia Tech College of Natural Resources & the Environment</h4>
-      <a href="http://cnre.vt.edu/students/paying-for-school/scholarships/" target="_blank">
+      <a href="https://frec.vt.edu/students/scholarships/index.html" target="_blank">
         <div class="category2">View Details</div>
       </a>
       <br /><br />
-      <h3>2014 Office of GIS Symposium Third Place</h3>
+      <h3>2014 OGIS Symposium Third Place</h3>
       <h4>Virginia Tech Office of GIS (OGIS)</h4>
       <a href="https://vtechworks.lib.vt.edu/handle/10919/50668" target="_blank">
         <div class="category2">View ePoster</div>
       </a>
-      <br /><br />
-      <h3>2014 ASPRS GeoLeague Team Challenge Second Place</h3>
-      <h4>American Society of Photogrammetry and Remote Sensing</h4>
+
 
     </p>
   </div>
